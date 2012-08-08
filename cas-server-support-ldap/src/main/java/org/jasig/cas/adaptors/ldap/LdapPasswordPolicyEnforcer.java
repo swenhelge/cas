@@ -193,7 +193,7 @@ public class LdapPasswordPolicyEnforcer extends AbstractPasswordPolicyEnforcer {
     /**
      * @return Number of days left to the expiration date, or {@value #PASSWORD_STATUS_PASS}
      */
-    public long getNumberOfDaysToPasswordExpirationDate(final String userId) throws LdapPasswordPolicyEnforcementException {
+    public long getNumberOfDaysToPasswordExpirationDate(final String userId, final String credentials) throws LdapPasswordPolicyEnforcementException {
         String msgToLog = null;
 
         final LdapPasswordPolicyResult ldapResult = getEnforcedPasswordPolicy(userId);

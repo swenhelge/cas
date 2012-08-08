@@ -34,4 +34,7 @@ import org.springframework.beans.factory.InitializingBean;
 public abstract class AbstractPasswordPolicyEnforcer implements PasswordPolicyEnforcer, InitializingBean {
     protected Logger logger = LoggerFactory.getLogger(getClass());
 
+    public final long getNumberOfDaysToPasswordExpirationDate(final String userId) throws LdapPasswordPolicyEnforcementException{
+        return this.getNumberOfDaysToPasswordExpirationDate(userId, null);
+    }
 }
